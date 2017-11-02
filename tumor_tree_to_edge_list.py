@@ -24,7 +24,7 @@ def parse_tumor_tree(path):
     entries = [
         {
             'type': row[5],
-            'edges': terms_to_edges([item for item in row[1:4] if item.strip()]),
+            'edges': terms_to_edges(['Tissue'] + [item for item in row[0:4] if item.strip()]),
         } for row in rows
     ]
 
